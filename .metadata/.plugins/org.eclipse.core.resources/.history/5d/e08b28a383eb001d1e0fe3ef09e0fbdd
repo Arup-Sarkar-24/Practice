@@ -1,0 +1,10 @@
+package com.cisco.groovy
+
+def a=10
+def b=10.24F
+
+println a
+println a.class
+println b
+println b.class
+

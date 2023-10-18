@@ -1,0 +1,44 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+}
+
+.main {
+	background-color: blue;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.card {
+	background-color: red;
+	border: none;
+}
+
+.form-control {
+	background-color: green;
+	color: white;
+}
+
+.form-check-label {
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.btn-primary {
+	background-color: lightgreen;
+	border: none;
+	padding: 10px 20px;
+	font-weight: bold;
+}
+
+.btn-primary:hover {
+	background-color: lightgreen;
+}
+
+.container {
+	margin-top: 20px;
+}

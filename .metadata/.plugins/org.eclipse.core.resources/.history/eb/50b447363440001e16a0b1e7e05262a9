@@ -1,0 +1,43 @@
+package com.mycompany.hotel.practice.impliment;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import com.mycompany.hotel.practice.entity.Hotel;
+import com.mycompany.hotel.practice.exceptions.ResourceNotFoundException;
+import com.mycompany.hotel.practice.repositories.HotelRepository;
+import com.mycompany.hotel.practice.services.HotelService;
+
+public class HotelServiceImpl implements HotelService {
+
+	@Autowired
+	private HotelRepository hotelRepository;
+	
+	@Override
+	public Hotel create(Hotel hotel) {
+		return hotelRepository.save(hotel);
+	}
+
+	@Override
+	public List<Hotel> getAll() {
+		return hotelRepository.findAll();
+	}
+
+	@Override
+	public Hotel get(String id) {
+		return hotelRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Hotel with given id is not found !!"));
+	}
+
+	@Override
+	public Hotel put(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Hotel delete(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,50 @@
+package com.mycompany.user.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+@Table(name = "micro_user")
+public class User {
+
+	@Id
+	@Column(name = "User_ID")
+	private String userId;
+
+	@Column(name = "User_Name", length = 150)
+	private String UserName;
+
+	@Column(name = "User_Address", length = 300)
+	private String address;
+
+	@Column(name = "User_Email", length = 50)
+	private String email;
+
+	@Column(name = "User_About", length = 500)
+	private String about;
+	
+	public User() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "User ->  userId : " + userId + ", UserName : " + UserName + ", address : " + address + ", email : " + email + ", about : " + about;
+	}
+	
+	@Transient
+	private List<Rating> ratings = new ArrayList<>();
+
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 	<!-- This is our 1st beans here value as a element  -->
+ 	<bean class="com.cisco.springcorefirst.Student" name="student1">
+ 		
+ 		<property name="studentId" >
+ 			<value>23432</value>
+ 		</property>
+ 		
+ 		<property name="studentName">
+ 			<value>Arup Sarkar</value>
+ 		</property>
+ 		
+ 		<property name="studentAddress">
+ 			<value>Kolkata</value>
+ 		</property>
+ 	
+ 	</bean>
+ 	<!-- This is our 2nd beans  here value as a property -->
+ 	<bean class="com.cisco.springcorefirst.Student" name="student2">
+ 		<property name="studentId" value="23433" />
+ 		<property name="studentName" value="Nirupama Sarkar" />
+ 		<property name="studentAddress" value="Balurghat" />
+ 	
+ 	</bean>
+ 	<!-- This is our 3rd beans here value as attribute  -->
+ 	<bean class="com.cisco.springcorefirst.Student" name="student3"  p:studentId = "23434" 		p:studentName = "Tamalika Karfa" p:studentAddress="Chandannagar" />
+ </beans>
+ 

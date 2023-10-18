@@ -1,0 +1,43 @@
+package com.mycompany.user.entities;
+
+public class Address {
+	private String streetName;
+	private String areaName;
+	private String cityName;
+	public String getStreetName() {
+		return streetName;
+	}
+	public void setStreetName(String streetName) {
+		this.streetName = streetName;
+	}
+	public String getAreaName() {
+		return areaName;
+	}
+	public void setAreaName(String areaName) {
+		this.areaName = areaName;
+	}
+	public String getCityName() {
+		return cityName;
+	}
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
+	}
+	public Address(String streetName, String areaName, String cityName) {
+		super();
+		this.streetName = streetName;
+		this.areaName = areaName;
+		this.cityName = cityName;
+	}
+	public Address() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return streetName + ", " + areaName + ", " + cityName;
+	}
+	
+	
+	
+
+}

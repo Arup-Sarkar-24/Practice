@@ -1,0 +1,8 @@
+127.0.0.1 - - [12/Aug/2023:19:35:03 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [12/Aug/2023:19:35:04 +0530] "GET /springmvcsearch/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [12/Aug/2023:19:35:08 +0530] "GET /springmvcsearch/home HTTP/1.1" 200 1979
+0:0:0:0:0:0:0:1 - - [12/Aug/2023:19:35:08 +0530] "GET /springmvcsearch/resources/js/script.js HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [12/Aug/2023:19:35:08 +0530] "GET /springmvcsearch/resources/image/myPhoto.png HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [12/Aug/2023:19:35:08 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [12/Aug/2023:19:35:22 +0530] "GET /springmvcsearch/fileform HTTP/1.1" 200 768
+0:0:0:0:0:0:0:1 - - [12/Aug/2023:19:50:54 +0530] "GET /springmvcsearch/fileform HTTP/1.1" 200 1029

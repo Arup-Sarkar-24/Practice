@@ -1,0 +1,26 @@
+package com.mycompany.hotel.practice.services;
+
+import java.util.List;
+
+import com.mycompany.hotel.practice.entity.Hotel;
+
+public interface HotelService {
+	
+	//create
+	Hotel create(Hotel hotel);
+	
+	//get all
+	List<Hotel> getAll();
+	
+	//get single
+	Hotel get(String id);
+	
+	//update	
+	Hotel put(String id);
+	
+	//delete
+	Hotel delete(String id);
+
+	Hotel updateHotel(String Id, Hotel updatedHotel);
+
+}

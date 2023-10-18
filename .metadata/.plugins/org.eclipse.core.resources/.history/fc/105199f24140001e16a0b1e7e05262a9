@@ -1,0 +1,5 @@
+package com.mycompany.hotel.practice.exceptions;
+
+public class GolbalExceptionHandler {
+
+}

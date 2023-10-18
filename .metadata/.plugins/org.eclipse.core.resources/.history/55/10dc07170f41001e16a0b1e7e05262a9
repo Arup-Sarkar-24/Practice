@@ -1,0 +1,86 @@
+package com.mycompany.user.services.impl;
+
+import com.mycompany.user.entities.Hotel;
+import com.mycompany.user.entities.Rating;
+import com.mycompany.user.entities.User;
+import com.mycompany.user.exceptions.ResourceNotFoundException;
+import com.mycompany.user.repositories.UserRepository;
+import com.mycompany.user.services.UserService;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+    private final UserRepository userRepository;
+
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+    @Autowired
+    private RestTemplate restTemplate;
+    
+    private Logger logger=LoggerFactory.getLogger(UserServiceImpl.class);
+
+    @Override
+    public User saveUser(User user) {
+        String randomUserId = UUID.randomUUID().toString();
+        user.setUserId(randomUserId);
+        return userRepository.save(user);
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
+    @Override
+    public User getUser(String userId) {
+    	//get user from database with the help of user repository
+        User user= userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
+        //fetch rating of the above user from rating service
+        ArrayList<Rating> ratingsOfUser= restTemplate.getForObject("http://localhost:8083/user/"+user.getUserId(), ArrayList.class);
+        logger.info("{ } ",ratingsOfUser);
+        
+        List<Rating> ratingList = ratingsOfUser.stream().map(rating ->{
+        	ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://localhost:8082/hotel/2", Hotel.class);
+        		Hotel hotel=forEntity.getBody();
+        }).collect(Collectors.toList());        
+        user.setRatings(ratingOfUser);
+        return user;
+    }
+
+    @Override
+    public User updateUser(String userId, User updatedUser) {
+        User existingUser = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
+
+        // Update properties from updatedUser
+        existingUser.setUserName(updatedUser.getUserName());
+        existingUser.setAddress(updatedUser.getAddress());
+        existingUser.setEmail(updatedUser.getEmail());
+        existingUser.setAbout(updatedUser.getAbout());
+
+        return userRepository.save(existingUser);
+    }
+
+    @Override
+    public void deleteUser(String userId) {
+        User userToDelete = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
+
+        userRepository.delete(userToDelete);
+    }
+}

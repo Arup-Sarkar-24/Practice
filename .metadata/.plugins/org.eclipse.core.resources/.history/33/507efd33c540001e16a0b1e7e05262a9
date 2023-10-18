@@ -1,0 +1,13 @@
+package com.mycompany.rating.operation;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Ratingservice01Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Ratingservice01Application.class, args);
+	}
+
+}

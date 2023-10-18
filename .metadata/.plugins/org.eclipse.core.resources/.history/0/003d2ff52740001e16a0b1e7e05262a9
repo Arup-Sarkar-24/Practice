@@ -1,0 +1,16 @@
+package com.mycompany.user.entities;
+
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Rating {
+	
+	private String ratingId;
+	private String userId;
+	private String hotelId;
+	private String ratings;
+
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SPA</title>
+<!-- Bootstrap 5 CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+<style>
+ body {
+  background-color: #f2f2f2;
+ }
+
+ .container {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+
+ h1 {
+  text-align: center;
+  color: #4CAF50;
+ }
+
+ p {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+ }
+
+</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>Sarkar Programming Academy</h1>
+		<p>Welcome to Sarkar Programming Academy, where aspiring programmers become coding experts!</p>
+		<p>Explore our diverse courses including Java, PHP, C++, Python, Angular, React, and more. Begin your coding journey with us!</p>
+		<form action="RegisterServlet" method="post">
+			<div class="mb-3">
+				<label for="user_name" class="form-label">Enter your name:</label>
+				<input type="text" class="form-control" id="user_name" name="user_name" placeholder="Enter your name here">
+			</div>
+			<div class="mb-3">
+				<label for="user_email" class="form-label">Enter your email:</label>
+				<input type="email" class="form-control" id="user_email" name="user_email" placeholder="Enter your email here">
+			</div>
+			<div class="mb-3">
+				<label for="user_password" class="form-label">Enter your password:</label>
+				<input type="password" class="form-control" id="user_password" name="user_password" placeholder="Enter your password here">
+			</div>
+			<div class="mb-3">
+				<label>Select Gender:</label><br>
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" name="user_gender" value="male" id="male">
+					<label class="form-check-label" for="male">Male</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" name="user_gender" value="female" id="female">
+					<label class="form-check-label" for="female">Female</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" name="user_gender" value="others" id="others">
+					<label class="form-check-label" for="others">Others</label>
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="user_course" class="form-label">Select your course:</label>
+				<select class="form-select" id="user_course" name="user_course">
+					<option value="Java">Java</option>
+					<option value="Php">PHP</option>
+					<option value="C">C</option>
+					<option value="C++">C++</option>
+					<option value="C#">C#</option>
+					<option value="Python">Python</option>
+					<option value="Angular">Angular</option>
+					<option value="React">React</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="checked" name="condition" id="condition">
+					<label class="form-check-label" for="condition">Agree terms and conditions</label>
+				</div>
+			</div>
+			<div class="mb-3">
+				<button type="submit" class="btn btn-primary">Register</button>
+				<button type="reset" class="btn btn-danger">Reset</button>
+			</div>
+		</form>
+	</div>
+
+<!-- Bootstrap 5 JS (optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	
+</body>
+</html>

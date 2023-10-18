@@ -1,0 +1,5 @@
+package com.mycompany.rating.operation.repository;
+
+public interface RatingRepository {
+
+}

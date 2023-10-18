@@ -1,0 +1,5 @@
+package com.mycompany.user.controller;
+
+public class UserController {
+
+}

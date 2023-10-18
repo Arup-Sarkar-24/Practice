@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BookServices.java&apos; to &apos;bootrestbook2/src/main/java/com.cisco.api.book.services&apos;&#x0D;&#x0A;- Original project: &apos;bootrestbook2&apos;&#x0D;&#x0A;- Destination element: &apos;bootrestbook2/src/main/java/com.cisco.api.book.services&apos;&#x0D;&#x0A;- Original element: &apos;com.cisco.api.book.services.BookServices.java&apos;" description="Copy compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.cisco.api.book.services" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.cisco.api.book.services{BookServices.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1677521083776" units="1" version="1.0"/>
+</session>

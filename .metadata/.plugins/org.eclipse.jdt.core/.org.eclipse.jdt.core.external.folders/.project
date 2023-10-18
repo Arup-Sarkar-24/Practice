@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link1</name>
+			<type>2</type>
+			<location>C:/Users/arusarka/Documents/workspace-spring-tool-suite-4-4.17.1.RELEASE/order-service/target/classes</location>
+		</link>
+		<link>
+			<name>.link2</name>
+			<type>2</type>
+			<location>C:/Users/arusarka/.groovy/greclipse/global_dsld_support</location>
+		</link>
+		<link>
+			<name>.link4</name>
+			<type>2</type>
+			<location>C:/Users/arusarka/Downloads/sts-4.17.1.RELEASE/plugins/org.codehaus.groovy_4.0.13.v202306301511-e2212/plugin_dsld_support</location>
+		</link>
+	</linkedResources>
+</projectDescription>

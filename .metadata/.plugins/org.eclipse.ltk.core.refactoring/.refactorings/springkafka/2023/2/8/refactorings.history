@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;KafkaProducer.java&apos; to &apos;springkafka/src/main/java/com.cisco.springkafka.kafka&apos;&#x0D;&#x0A;- Original project: &apos;springkafka&apos;&#x0D;&#x0A;- Destination element: &apos;springkafka/src/main/java/com.cisco.springkafka.kafka&apos;&#x0D;&#x0A;- Original element: &apos;com.cisco.springkafka.KafkaProducer.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.cisco.springkafka.kafka" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.cisco.springkafka{KafkaProducer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1677050009964" units="1" version="1.0"/>
+</session>

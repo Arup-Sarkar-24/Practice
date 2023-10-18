@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"xmlns="https://www.w3.org/1999/xhtml" 
+xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>I am learning spring boot with thymeleaf and emmet</h1>
+	<h2 >Name of the Owner is : <span th:text="${#strings.toUpperCase(name)}"></span></h2>
+	<div th:with="a=5,b=67,n=${name}">
+	<h4>Value of a is <span th:text="${a}"></span></h4>
+	</div>
+	<h3 th:text="${currentDate}"></h3>
+</body>
+</html>

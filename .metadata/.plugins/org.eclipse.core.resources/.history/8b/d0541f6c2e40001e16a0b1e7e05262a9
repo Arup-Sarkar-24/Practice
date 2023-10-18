@@ -1,0 +1,5 @@
+package com.mycompany.hotel.practice.entity;
+
+public class Hotel {
+
+}

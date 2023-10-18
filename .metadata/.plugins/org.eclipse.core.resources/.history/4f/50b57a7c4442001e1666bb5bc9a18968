@@ -1,0 +1,5 @@
+package com.mycompany.user.external.services;
+
+public class HotelService {
+
+}

@@ -1,0 +1,15 @@
+package com.mycompany.rating.operation.services;
+
+import java.util.List;
+
+import com.mycompany.rating.operation.entities.Rating;
+
+
+public interface RatingService {
+	
+	Rating saveRating(Rating rating);
+	List<Rating> getAllRatings();
+	Rating getRating(String id);
+	Rating updateRating(String id, Rating updateRating);
+	void deleteRating(String id);
+}

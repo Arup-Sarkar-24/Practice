@@ -1,0 +1,38 @@
+package com.mycompany.rating.operation.implement;
+
+import java.util.List;
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mycompany.hotel.practice.exceptions.ResourceNotFoundException;
+import com.mycompany.rating.operation.entities.Rating;
+import com.mycompany.rating.operation.repository.RatingRepository;
+import com.mycompany.rating.operation.services.RatingService;
+
+public class RatingServiceImpl  implements RatingService{
+	@Autowired
+	public RatingRepository ratingRepository;
+	@Override
+	public Rating create(Rating rating) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Rating> getAllRatings() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Rating> getRatingByUserId(String UserId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Rating> getRatingByHotelId(String hotelId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}
